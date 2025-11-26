@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Uygulaması</title>
+<style>
+    body {
+        background-color: #8A2BE2; /* Mor arka plan */
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 50px; 
+    }
+
+    h1 {
+        color: white;
+        background-color: #8B4513; 
+        padding: 40px 80px;
+        border-radius: 10px; 
+        margin-top: 50px; 
+        
+        cursor: default; 
+        display: inline-block; /* Yan yana flangelenmeyi önler */
+    }
+
+    .quiz-box {
+        background-color: #1E90FF; /* Mavi ton arka plan */
+        padding: 100px 200px;
+        border-radius: 15px;
+        margin: 0px auto 0 auto; /* Ortala ve üstten boşluk bırak */
+        text-align: center;
+        width: fit-content; /* İçerik genişliğine göre boyut */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .quiz-box p {
+        color: white;
+        font-size: 36px;
+        margin: 10px 0 30px 0;
+        
+    }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /* Sütun genişliğini artırdık */
+    justify-content: center;
+    gap: 20px 30px;
+}
+
+button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 20px 40px; /* Daha yüksek ve geniş */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 22px;
+}
+    button:hover {
+        background-color: #A0522D;
+    }
+.skorDiv {
+   background-color: brown;
+   color: white;
+   font-size: 30px;
+   font-family: Arial, Helvetica, sans-serif;
+   border: 2px solid black;
+   border-radius: 10px;
+   display: inline-block;
+   width: 150px;
+   height: 110px;
+   text-align: center;
+   line-height: 100px; /* height ile aynı yap */
+   margin-left:30px;
+}
+
+</style>
+</head>
+<body>
+<div class="container"> 
+    <h1>QUIZ Uygulamasına Hoş Geldin!</h1>
+     <p  class="skorDiv" id="skor">SKOR:0</p>
+</div>
+
+<div class="quiz-box">
+    <p style="cursor: default;" id="soru">Türkiye'nin başkenti neresidir?</p>
+   
+    <div class="buttons">
+        <button id="btn1">Ankara</button>
+        <button id="btn2">İstanbul</button>
+        <button id="btn3">Sinop</button>
+        <button id="btn4">Edirne</button>
+    </div>
+</div>
+<div>
+
+    
+
+
+</div>
+<script src="Quiz.js"></script>
+</body>
+</html>
+
+
+
+

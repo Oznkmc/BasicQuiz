@@ -4,7 +4,7 @@ const btn3 = document.querySelector("#btn3");
 const btn4 = document.querySelector("#btn4");
 const lbl = document.querySelector("#soru");
 let score=document.querySelector("#skor");
-const point=0;
+let point=0;
 localStorage.setItem("sorular", JSON.stringify([
     "Türkiye'nin başkenti neresidir?",
     "Geliştiricinin Adı Nedir?"
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", Load);
 document.addEventListener("click", dogruluk);
 
 function dogruluk(e) {
-    // tıklanan elementi alıyoruz
+   
     const tiklanan = e.target;
 
-    // textContent kontrolü
+   
     if (tiklanan.textContent === "Ozan" || tiklanan.textContent === "Ankara") {
         alert("Doğru Bildin!");
         score.textContent="SKOR:"+(point+5);

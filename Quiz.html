@@ -6,7 +6,7 @@
 <title>Quiz Uygulaması</title>
 <style>
     body {
-        background-color: #8A2BE2; /* Mor arka plan */
+        background-color: #8A2BE2;
         margin: 0;
         font-family: Arial, sans-serif;
     }
@@ -24,16 +24,16 @@
         margin-top: 50px; 
         
         cursor: default; 
-        display: inline-block; /* Yan yana flangelenmeyi önler */
+        display: inline-block;
     }
 
     .quiz-box {
-        background-color: #1E90FF; /* Mavi ton arka plan */
+        background-color: #1E90FF;
         padding: 100px 200px;
         border-radius: 15px;
-        margin: 0px auto 0 auto; /* Ortala ve üstten boşluk bırak */
+        margin: 0px auto 0 auto;
         text-align: center;
-        width: fit-content; /* İçerik genişliğine göre boyut */
+        width: fit-content; 
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
@@ -46,7 +46,7 @@
 
   .buttons {
     display: grid;
-    grid-template-columns: repeat(2, 200px); /* Sütun genişliğini artırdık */
+    grid-template-columns: repeat(2, 200px);
     justify-content: center;
     gap: 20px 30px;
 }
@@ -55,7 +55,7 @@ button {
     background-color: #8B4513;
     color: white;
     border: none;
-    padding: 20px 40px; /* Daha yüksek ve geniş */
+    padding: 20px 40px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 22px;
@@ -74,7 +74,7 @@ button {
    width: 150px;
    height: 110px;
    text-align: center;
-   line-height: 100px; /* height ile aynı yap */
+   line-height: 100px; 
    margin-left:30px;
 }
 
@@ -87,13 +87,13 @@ button {
 </div>
 
 <div class="quiz-box">
-    <p style="cursor: default;" id="soru">Türkiye'nin başkenti neresidir?</p>
+    <p style="cursor: default;" id="soru"></p>
    
     <div class="buttons">
-        <button id="btn1">Ankara</button>
-        <button id="btn2">İstanbul</button>
-        <button id="btn3">Sinop</button>
-        <button id="btn4">Edirne</button>
+        <button id="btn1"></button>
+        <button id="btn2"></button>
+        <button id="btn3"></button>
+        <button id="btn4"></button>
     </div>
 </div>
 <div>

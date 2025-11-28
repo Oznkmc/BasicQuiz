@@ -6,13 +6,17 @@ const lbl = document.querySelector("#soru");
 let score = document.querySelector("#skor");
 let point = 0;
 
-// Sorular ve şıklar (BİR KEZ TANIMLA)
 let sorular = [
     "Türkiye'nin başkenti neresidir?",
     "Türkiye’de yüz ölçümü en büyük il hangisidir?",
     "İlk Türk kadın pilot kimdir?",
     "Güneş Sistemi’nin en büyük gezegeni hangisidir?",
-    "Hangi şehir “Işıklar Şehri” olarak bilinir?"
+    "Hangi şehir “Işıklar Şehri” olarak bilinir?",
+    "Güneş Sistemi’ne en yakın yıldız hangisidir?",
+    "Su kaç derecede donar?",
+    "En büyük okyanus hangisidir?",
+    "Hangisi bir enerji birimidir?",
+    "Leonardo da Vinci’nin ünlü “Mona Lisa” eseri nerededir?",  
 ];
 
 let siklar = [
@@ -20,15 +24,17 @@ let siklar = [
     ["Konya","Sinop","İstanbul","Edirne"],
     ["Afet İnan","Sabiha Gökçen","Halide Edip","Türkan Saylan"],
     ["Mars","Jüpiter","Satürn","Dünya"],
-    ["Paris","İstanbul","Roma","Moskova","Selanik"]
+    ["Paris","İstanbul","Roma","Moskova"],
+    ["Sirius","Vega","Proxima Centauri","Betelgeuse"],
+    ["-1","0","10","100"],
+    ["Hint Okyanusu","Atlas Okyanusu","Büyük Okyanus (Pasifik)","Arktik Okyanusu"],
+    ["Newton","Joule","Pascal","Hertz"],
+    ["British Museum","Louvre Müzesi","Vatikan Müzesi","Prado Müzesi"],
 ];
 
-let dogruCevap = ["Ankara", "Konya","Sabiha Gökçen","Jüpiter","Paris"];
-
+let dogruCevap = ["Ankara", "Konya","Sabiha Gökçen","Jüpiter","Paris","Proxima Centauri","0","Büyük Okyanus (Pasifik)","Joule","Louvre Müzesi"];
 let mevcutSoruIndex = -1;
-
 document.addEventListener("DOMContentLoaded", Load);
-
 btn1.addEventListener("click", dogruluk);
 btn2.addEventListener("click", dogruluk);
 btn3.addEventListener("click", dogruluk);
@@ -65,9 +71,11 @@ function QuizBitti()
 }
 function Load() {
     
-    if (sorular.length === 0) {
-        QuizBitti();
-    }
+   if (sorular.length === 0) {
+    QuizBitti();
+    return; 
+}
+
     mevcutSoruIndex = Math.floor(Math.random() * sorular.length);
 
     lbl.textContent = sorular[mevcutSoruIndex];
